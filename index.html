@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gear CV V.1.10</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* ✅ โหลดฟอนต์จาก Google Fonts ให้ถูกต้อง */
+        @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+        /* ===== Base ===== */
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --accent: #01D5A2;
+            --hover: #ff8025;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Noto Sans Thai", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        /* ===== Top bar ===== */
+        .sau-bar {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 100px;
+            /* บน-ล่าง  ซ้าย-ขวา */
+        }
+
+        .logo-bar {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .menu-bar a {
+            text-decoration: none;
+            font-family: "Monomaniac One", sans-serif;
+            color: var(--text);
+            font-size: 1.3rem;
+            margin: 0 10px;
+            transition: color .2s ease;
+        }
+
+        .menu-bar a:hover {
+            color: var(--hover);
+        }
+
+        .logo-bar img {
+            width: 75px;
+            /* ถ้าอยากให้โลโก้มีกรอบ เอาคอมเมนต์ด้านล่างออกได้ */
+            /* border: 3px solid #fff; border-radius: 10px; padding: 4px; */
+        }
+
+        .social-bar i {
+            font-size: 1.3rem;
+            margin: 0 10px;
+            color: var(--text);
+            transition: color .2s ease, transform .15s ease;
+            cursor: pointer;
+        }
+
+        .social-bar i:hover {
+            color: #ffff00;
+            transform: translateY(-1px);
+        }
+
+        /* ===== Title / Text Section ===== */
+        .text-section {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        .text-section h1 {
+            margin: 0.25em 0;
+            font-family: "Monomaniac One", sans-serif;
+            line-height: 1.1;
+        }
+
+        .a-title {
+            font-size: 2rem;
+            color: #ffffff;
+        }
+
+        #job-title {
+            font-size: 3rem;
+            color: var(--accent);
+        }
+
+        /* ===== Img Section ===== */
+        .img-section {
+            display: flex;
+            justify-content: center;
+            /* จัดภาพให้อยู่กลาง */
+            margin-top: 80px;
+            margin-bottom: 120px;
+        }
+
+        .img-show {
+            display: inline-block;
+            border: 2px solid #ff8025;
+            width: 250x;
+            height: 250px;
+            border-radius: 250px;
+        }
+
+        .img-show img {
+            width: 250px;
+            height: 250px;
+            border-radius: 250px;
+        }
+
+        .img-show img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(67, 255, 4, 0.5);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .sau-bar {
+                margin: 16px 20px;
+            }
+
+            .menu-bar a {
+                font-size: 1.1rem;
+                margin: 0 8px;
+            }
+
+            .text-section {
+                margin-top: 100px;
+            }
+
+            #job-title {
+                font-size: 2.4rem;
+            }
+
+            .a-title {
+                font-size: 1.6rem;
+            }
+
+            .img-show img {
+                width: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sau-bar -->
+    <div class="sau-bar">
+        <div class="menu-bar">
+            <a href="#">Portfolio</a>
+            <a href="#">About Me</a>
+            <a href="#">Get In Touch</a>
+        </div>
+        <div class="logo-bar">
+            <img src="./images/logo.png" alt="logo">
+        </div>
+        <div class="social-bar">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </div>
+
+    <!-- title-section -->
+    <div class="text-section">
+        <h1 class="a-title">Chanathip</h1>
+        <h1 id="job-title">Freelance Web Developer</h1>
+        <h1 class="a-title">Basein in THAILAND</h1>
+    </div>
+
+    <!-- img-section -->
+    <div class="img-section">
+        <div class="img-show">
+            <img src="./images/img01.png" alt="me">
+        </div>
+    </div>
+</body>
+
+</html>
+ 
