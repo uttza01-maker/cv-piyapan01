@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gear CV V.1.10</title>
+    <title>cv-piyapan01</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* ✅ โหลดฟอนต์จาก Google Fonts ให้ถูกต้อง */
+        /* ✅ โหลดฟอนต์จาก Google Fonts */
         @import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Noto+Sans+Thai:wght@100..900&display=swap");
 
         /* ===== Base ===== */
@@ -37,18 +36,16 @@
 
         /* ===== Top bar ===== */
         .sau-bar {
-            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 20px 100px;
-            /* บน-ล่าง  ซ้าย-ขวา */
+            padding: 20px 100px;
         }
 
-        .logo-bar {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+        .logo-text {
+            font-family: "Monomaniac One", sans-serif;
+            font-size: 2.2rem;
+            color: var(--hover);
         }
 
         .menu-bar a {
@@ -64,12 +61,6 @@
             color: var(--hover);
         }
 
-        .logo-bar img {
-            width: 75px;
-            /* ถ้าอยากให้โลโก้มีกรอบ เอาคอมเมนต์ด้านล่างออกได้ */
-            /* border: 3px solid #fff; border-radius: 10px; padding: 4px; */
-        }
-
         .social-bar i {
             font-size: 1.3rem;
             margin: 0 10px;
@@ -79,7 +70,7 @@
         }
 
         .social-bar i:hover {
-            color: #ffff00;
+            color: var(--hover);
             transform: translateY(-1px);
         }
 
@@ -109,23 +100,23 @@
         .img-section {
             display: flex;
             justify-content: center;
-            /* จัดภาพให้อยู่กลาง */
             margin-top: 80px;
             margin-bottom: 120px;
         }
 
         .img-show {
-            display: inline-block;
-            border: 2px solid #ff8025;
-            width: 250x;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            width: 250px;
             height: 250px;
-            border-radius: 250px;
+            overflow: hidden;
         }
 
         .img-show img {
-            width: 250px;
-            height: 250px;
-            border-radius: 250px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .img-show img:hover {
@@ -136,10 +127,19 @@
         /* ===== Responsive ===== */
         @media (max-width: 768px) {
             .sau-bar {
-                margin: 16px 20px;
+                padding: 16px 20px;
+            }
+            
+            .logo-text {
+                font-size: 1.8rem;
             }
 
             .menu-bar a {
+                font-size: 1.1rem;
+                margin: 0 8px;
+            }
+
+            .social-bar i {
                 font-size: 1.1rem;
                 margin: 0 8px;
             }
@@ -156,46 +156,40 @@
                 font-size: 1.6rem;
             }
 
-            .img-show img {
+            .img-show {
                 width: 220px;
+                height: 220px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- sau-bar -->
     <div class="sau-bar">
         <div class="menu-bar">
             <a href="#">Portfolio</a>
             <a href="#">About Me</a>
             <a href="#">Get In Touch</a>
         </div>
-        <div class="logo-bar">
-            <img src="./images/logo.png" alt="logo">
-        </div>
+        <h1 class="logo-text">hello</h1>
         <div class="social-bar">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </div>
 
-    <!-- title-section -->
     <div class="text-section">
-        <h1 class="a-title">Chanathip</h1>
+        <h1 class="a-title">Piyapan Kummoon</h1>
         <h1 id="job-title">Freelance Web Developer</h1>
-        <h1 class="a-title">Basein in THAILAND</h1>
+        <h1 class="a-title">Based In THAILAND</h1>
     </div>
 
-    <!-- img-section -->
     <div class="img-section">
         <div class="img-show">
             <img src="./images/img01.png" alt="me">
         </div>
     </div>
 </body>
-
 </html>
- 
